@@ -1,35 +1,33 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import Switch from "./components/Switch";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <div>
-        <a href="https://vite.dev" target="_blank">
-          <img src={viteLogo} className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://react.dev" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
+      <Switch />
+      <div className="container flex flex-col mx-auto py-50 px-30 space-y-[100px]">
+        <div className="w-full flex">
+          <div className="flex flex-col gap-5 w-2/3">
+            <h1 className="text-6xl text-white font-bold">Ilya Holuban</h1>
+            <h2 className="text-3xl">Front End Engineer</h2>
+            <h3 className="text-xl leading-9 text-neutral-400">
+              I'm <strong>Ilya Holuban</strong>, Lorem ipsum dolor sit amet
+              consectetur adipisicing elit. Nam quibusdam non deleniti quo, qui
+              alias accusantium labore voluptatum officia, ea nemo at harum
+              doloremque nulla molestias quidem nisi sint similique?
+            </h3>
+          </div>
+          <div className="w-1/3">
+            <div className="w-[400px] h-[300px] bg-amber-300 flex items-center justify-center text-black text-3xl">
+              image
+            </div>
+          </div>
+        </div>
+        <div className="w-full h-[400px] flex items-center justify-center bg-amber-300">
+          VIDEO
+        </div>
       </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
