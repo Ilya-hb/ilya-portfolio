@@ -26,3 +26,6 @@ strong {
 .icon {
   @apply hover:text-accent transition-colors duration-300 cursor-pointer;
 }
+.defaultButton {
+  @apply px-10 py-3 bg-black border-neutral-700 border-1 rounded-xl hover:bg-neutral-600 transition cursor-pointer flex items-center gap-2 active:bg-white active:text-black;
+}
