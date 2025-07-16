@@ -23,3 +23,6 @@ strong {
   color: white;
   font-weight: bold;
 }
+.icon {
+  @apply hover:text-accent transition-colors duration-300 cursor-pointer;
+}

@@ -1,4 +1,5 @@
 import React from "react";
+import Socials from "../components/Socials";
 
 export default function MainSection() {
   return (
@@ -12,6 +13,7 @@ export default function MainSection() {
           alias accusantium labore voluptatum officia, ea nemo at harum
           doloremque nulla molestias quidem nisi sint similique?
         </h3>
+        <Socials />
       </div>
       <div className="w-1/3">
         <div className="w-[400px] h-[300px] bg-accent flex items-center justify-center text-black text-3xl">
