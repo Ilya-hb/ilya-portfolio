@@ -1,13 +1,24 @@
-import React from "react";
 import Socials from "../components/Socials";
 import { GrDocumentUser } from "react-icons/gr";
+import { motion } from "motion/react";
+import { fadeIn } from "../utils/animations";
 
 export default function MainSection() {
   return (
     <section className="w-full flex">
       <div className="flex flex-col gap-5 w-2/3">
-        <h1 className="text-6xl text-white font-bold">Ilya Holuban</h1>
-        <h2 className="text-3xl">Front End Engineer</h2>
+        <motion.h1
+          {...fadeIn}
+          className="text-6xl text-white font-bold"
+        >
+          Ilya Holuban
+        </motion.h1>
+        <motion.h2
+          {...fadeIn}
+          className="text-3xl"
+        >
+          Front End Engineer
+        </motion.h2>
         <h3 className="text-xl leading-9 text-neutral-400">
           I'm <strong>Ilya Holuban</strong>, Lorem ipsum dolor sit amet
           consectetur adipisicing elit. Nam quibusdam non deleniti quo, qui
@@ -17,9 +28,13 @@ export default function MainSection() {
         <Socials />
       </div>
       <div className="w-1/3 flex flex-col justify-center items-center gap-5">
-        <div className="w-[400px] h-[300px] bg-accent flex items-center justify-center text-black text-3xl">
+        <motion.div
+          animate={{ y: [0, -10, 0] }}
+          transition={{ repeat: Infinity, duration: 2 }}
+          className="w-[400px] h-[300px] bg-accent flex items-center justify-center text-black text-3xl"
+        >
           image
-        </div>
+        </motion.div>
         <a
           href="https://drive.google.com/file/d/1Q1kmHFldK6Upsl_9_vdSt701G1cz2KTA/view?usp=sharing"
           target="_blank"

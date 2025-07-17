@@ -1,6 +1,12 @@
+import { slideUp } from "../utils/animations";
+import { motion } from "motion/react";
+
 export default function BackgroundSection() {
   return (
-    <section className="flex px-30">
+    <motion.section
+      {...slideUp}
+      className="flex px-30"
+    >
       <h2 className="text-accent text-4xl font-bold w-1/3 ">Background</h2>
       <div className="w-2/3">
         <p className="text-lg leading-8 text-neutral-300">
@@ -26,6 +32,6 @@ export default function BackgroundSection() {
           excited for what’s ahead.
         </p>
       </div>
-    </section>
+    </motion.section>
   );
 }
