@@ -3,6 +3,8 @@ import BackgroundSection from "./sections/BackgroundSection";
 import MainSection from "./sections/MainSection";
 import VideoSection from "./sections/VideoSection";
 import SkillsSection from "./sections/SkillsSection";
+import ProjectsSection from "./sections/ProjectsSection";
+import FormSection from "./sections/FormSection";
 
 function App() {
   return (
@@ -15,6 +17,10 @@ function App() {
         <BackgroundSection />
         <hr className="h-1 text-accent" />
         <SkillsSection />
+        <hr className="h-1 text-accent" />
+        <ProjectsSection />
+        <hr className="h-1 text-accent" />
+        <FormSection />
       </div>
     </>
   );
