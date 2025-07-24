@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "motion/react";
 import { slideUp, staggerContainer } from "../utils/animations";
+import { projects } from "../data/projects";
 import Project from "../components/Project";
 
 export default function ProjectsSection() {
@@ -9,49 +10,21 @@ export default function ProjectsSection() {
       {...slideUp}
       className="flex px-30"
     >
-      <h2 className="text-accent text-4xl font-bold w-1/3 ">Projects</h2>
+      <h2 className="text-accent text-4xl font-bold w-1/3 ">
+        Featured Projects
+      </h2>
       <motion.div
-        className="w-2/3"
+        className="w-2/3 flex flex-wrap"
         initial="hidden"
         whileInView="show"
         variants={staggerContainer}
       >
-        <Project
-          name="Kastom reviews"
-          desc="Fullstack MERN Application that allows...lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
-          imgPath=""
-          technologies=""
-        />
-        <Project
-          name="Kastom reviews"
-          desc="Fullstack MERN Application that allows...lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
-          imgPath=""
-          technologies=""
-        />
-        <Project
-          name="Kastom reviews"
-          desc="Fullstack MERN Application that allows...lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
-          imgPath=""
-          technologies=""
-        />
-        <Project
-          name="Kastom reviews"
-          desc="Fullstack MERN Application that allows...lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
-          imgPath=""
-          technologies=""
-        />
-        <Project
-          name="Kastom reviews"
-          desc="Fullstack MERN Application that allows...lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
-          imgPath=""
-          technologies=""
-        />
-        <Project
-          name="Kastom reviews"
-          desc="Fullstack MERN Application that allows...lorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsumlorem ipsum"
-          imgPath=""
-          technologies=""
-        />
+        {projects.map((el) => (
+          <Project
+            key={el.id}
+            project={el}
+          />
+        ))}
       </motion.div>
     </motion.section>
   );
