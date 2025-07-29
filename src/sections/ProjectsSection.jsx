@@ -14,7 +14,7 @@ export default function ProjectsSection() {
         Featured Projects
       </h2>
       <motion.div
-        className="w-2/3 flex flex-wrap"
+        className="w-2/3 flex flex-col gap-5"
         initial="hidden"
         whileInView="show"
         variants={staggerContainer}
